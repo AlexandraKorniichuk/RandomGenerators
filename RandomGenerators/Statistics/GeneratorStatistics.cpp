@@ -16,7 +16,7 @@ void GeneratorStatistics::BuildHistogram() const
     float value = Min;
     for (int i = 0; i < Size; i++)
     {
-        cout << "[" << value << "; " << value + Step << "] " << Statistics[i] / Amount << endl;
+        cout << "[" << value << "; " << value + Step << "] " << (float)Statistics[i] / Amount << endl;
         value += Step;
     }
 }
@@ -30,15 +30,17 @@ void GeneratorStatistics::ClearStatistics()
     }
 }
 
-void GeneratorStatistics::AddToStatistics(int newValue)
+void GeneratorStatistics::AddToStatistics(float newValue)
 {
+    float value = Min;
     for (int i = 1; i <= Size; i++)
     {
-        if (newValue <= i * Step)
+        if (newValue <= value)
         {
-            Statistics[i]++;
+            Statistics[i - 1]++;
             Amount++;
             break;
         }
+        value += Step;
     }
 }

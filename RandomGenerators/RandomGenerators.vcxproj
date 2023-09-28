@@ -32,20 +32,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -154,15 +154,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Generators\Uniform\LinearCongruentGenerator.cpp" />
+    <ClCompile Include="Generators\Uniform\QuadraticCongruentGenerator.cpp" />
+    <ClCompile Include="Generators\Uniform\UniformGeneratorBase.cpp" />
+    <ClCompile Include="RandomGeneratorBase.cpp" />
     <ClCompile Include="Statistics\GeneratorStatistics.cpp" />
-    <ClCompile Include="RandomGenerator.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Statistics\StatisticsConverter.cpp" />
+    <ClCompile Include="Tests\TestGenerators.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Generators\Uniform\LinearCongruentGenerator.h" />
+    <ClInclude Include="Generators\Uniform\QuadraticCongruentGenerator.h" />
+    <ClInclude Include="Generators\Uniform\UniformGeneratorBase.h" />
+    <ClInclude Include="RandomGeneratorBase.h" />
     <ClInclude Include="Statistics\GeneratorStatistics.h" />
-    <ClInclude Include="RandomGenerator.h" />
     <ClInclude Include="Statistics\StatisticsConverter.h" />
+    <ClInclude Include="Tests\TestGenerators.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Generators\Normal\" />
+    <Folder Include="Generators\Other\" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

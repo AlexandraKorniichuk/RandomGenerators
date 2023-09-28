@@ -12,12 +12,11 @@ public:
 
     void BuildHistogram() const;
     void ClearStatistics();
-    void AddToStatistics(int newValue);
+    void AddToStatistics(float newValue);
 
 private:
     int* Statistics{};
 
-private:
     int Size = 100;
     int Min = 0;
     int Max = 1;
