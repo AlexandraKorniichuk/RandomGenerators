@@ -3,7 +3,9 @@
 FibonacciGenerator::FibonacciGenerator()
     : UniformGeneratorBase()
 {
-    m = 1000007;
+    xPrevious = x;
+    xn = xPrevious + 10;  
+    m = 54435;
 }
 
 FibonacciGenerator::FibonacciGenerator(int seed)
