@@ -3,6 +3,7 @@
 #include "Generators/Uniform/LinearCongruentGenerator.h"
 #include "Generators/Uniform/QuadraticCongruentGenerator.h"
 #include "Generators/Uniform/ReverseCongruentGenerator.h"
+#include "Generators/Uniform/UnionGenerator.h"
 #include "Tests/TestGenerators.h"
 
 
@@ -25,7 +26,12 @@ int main(int argc, char* argv[])
 
     cout << endl;
     cout << "Reverse congruent Method" << endl;
-    auto* unionGenerator = new ReverseCongruentGenerator(5);
+    auto* reverseGenerator = new ReverseCongruentGenerator(5);
+    TestGenerators::TestUniform(reverseGenerator);
+
+    cout << endl;
+    cout << "Union Method" << endl;
+    auto* unionGenerator = new UnionGenerator(5, fibonacciGenerator, linearGenerator);
     TestGenerators::TestUniform(unionGenerator);
     
     return 0;

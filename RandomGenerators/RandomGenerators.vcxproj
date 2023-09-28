@@ -159,6 +159,7 @@
     <ClCompile Include="Generators\Uniform\QuadraticCongruentGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\UniformGeneratorBase.cpp" />
     <ClCompile Include="Generators\Uniform\ReverseCongruentGenerator.cpp" />
+    <ClCompile Include="Generators\Uniform\UnionGenerator.cpp" />
     <ClCompile Include="RandomGeneratorBase.cpp" />
     <ClCompile Include="Statistics\GeneratorStatistics.cpp" />
     <ClCompile Include="Program.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Generators\Uniform\QuadraticCongruentGenerator.h" />
     <ClInclude Include="Generators\Uniform\UniformGeneratorBase.h" />
     <ClInclude Include="Generators\Uniform\ReverseCongruentGenerator.h" />
+    <ClInclude Include="Generators\Uniform\UnionGenerator.h" />
     <ClInclude Include="RandomGeneratorBase.h" />
     <ClInclude Include="Statistics\GeneratorStatistics.h" />
     <ClInclude Include="Statistics\StatisticsConverter.h" />
