@@ -1,8 +1,11 @@
 ﻿#pragma once
-#include "../../RandomGeneratorBase.h"
+#include "UniformGeneratorBase.h"
 
-class QuadraticCongruentGenerator : public  RandomGeneratorBase
+class QuadraticCongruentGenerator : public  UniformGeneratorBase
 {
 public:
+    QuadraticCongruentGenerator();
+    explicit QuadraticCongruentGenerator(int seed);
     
+    int Generate() override;
 };

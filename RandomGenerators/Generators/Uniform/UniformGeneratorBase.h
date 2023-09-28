@@ -7,7 +7,7 @@ public:
     UniformGeneratorBase();
     explicit UniformGeneratorBase(int seed);
 
-    const int m = 2147483647;
+    int m = 2147483647;
     
     float CalculateUn() const;
 };

@@ -1,8 +1,8 @@
 ﻿#pragma once
-#include "../Generators/Uniform/LinearCongruentGenerator.h"
+#include "../Generators/Uniform/UniformGeneratorBase.h"
 
 class TestGenerators
 {
 public:
-    static void TestUniform(LinearCongruentGenerator* generator);
+    static void TestUniform(UniformGeneratorBase* generator);
 };

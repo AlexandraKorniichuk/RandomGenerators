@@ -1,11 +1,12 @@
 ﻿#include "TestGenerators.h"
 
-void TestGenerators::TestUniform(LinearCongruentGenerator* generator)
+void TestGenerators::TestUniform(UniformGeneratorBase* generator)
 {
-    for (int i = 0; i < 100; i++)
+    constexpr int n = 100;
+    for (int i = 0; i < n; i++)
     {
         generator->Generate();
-        float un = generator->CalculateUn();
+        const float un = generator->CalculateUn();
         generator->Statistics->AddToStatistics(un);
     }
     generator->Statistics->BuildHistogram();

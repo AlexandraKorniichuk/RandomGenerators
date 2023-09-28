@@ -154,6 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Generators\Uniform\FibonacciGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\LinearCongruentGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\QuadraticCongruentGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\UniformGeneratorBase.cpp" />
@@ -164,6 +165,7 @@
     <ClCompile Include="Tests\TestGenerators.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Generators\Uniform\FibonacciGenerator.h" />
     <ClInclude Include="Generators\Uniform\LinearCongruentGenerator.h" />
     <ClInclude Include="Generators\Uniform\QuadraticCongruentGenerator.h" />
     <ClInclude Include="Generators\Uniform\UniformGeneratorBase.h" />
