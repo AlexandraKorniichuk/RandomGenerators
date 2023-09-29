@@ -1,8 +1,7 @@
 ﻿#include "LogarifmGenerator.h"
 
 LogarifmGenerator::LogarifmGenerator(int seed, UniformGeneratorBase* generator)
-    : NormalGenerator(seed),
-      Generator(generator)
+    : NormalGenerator(seed), Generator(generator)
 {
     Statistics = new GeneratorStatistics(Other);
 }

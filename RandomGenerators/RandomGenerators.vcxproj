@@ -158,6 +158,7 @@
     <ClCompile Include="Generators\Normal\PolarCoordinatesGenerator.cpp" />
     <ClCompile Include="Generators\Normal\RatioGenerator.cpp" />
     <ClCompile Include="Generators\Normal\ThreeSigmaGenerator.cpp" />
+    <ClCompile Include="Generators\Other\ArensaGenerator.cpp" />
     <ClCompile Include="Generators\Other\LogarifmGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\FibonacciGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\LinearCongruentGenerator.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="Generators\Normal\PolarCoordinatesGenerator.h" />
     <ClInclude Include="Generators\Normal\RatioGenerator.h" />
     <ClInclude Include="Generators\Normal\ThreeSigmaGenerator.h" />
+    <ClInclude Include="Generators\Other\ArensaGenerator.h" />
     <ClInclude Include="Generators\Other\LogarifmGenerator.h" />
     <ClInclude Include="Generators\Uniform\FibonacciGenerator.h" />
     <ClInclude Include="Generators\Uniform\LinearCongruentGenerator.h" />

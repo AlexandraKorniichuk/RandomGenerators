@@ -22,6 +22,7 @@ int main(int argc, char* argv[])
     auto* polarGenerator = new PolarCoordinatesGenerator(5, reverseGenerator, quadraticGenerator);
     auto* ratioGenerator = new RatioGenerator(5, linearGenerator, fibonacciGenerator);
     auto* logarifmGenerator = new LogarifmGenerator(5, reverseGenerator);
+    auto* arensaGenerator = new LogarifmGenerator(5, reverseGenerator);
 
     while(true)
     {
@@ -74,6 +75,11 @@ int main(int argc, char* argv[])
             cout << endl;
             cout << "Logarifm Method" << endl;
             TestGenerators::TestNormal(logarifmGenerator);
+            break;
+        case 10:
+            cout << endl;
+            cout << "Arensa Method" << endl;
+            TestGenerators::TestNormal(arensaGenerator);
             break;
         default:
             return 0;
