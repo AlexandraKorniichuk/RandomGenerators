@@ -2,6 +2,7 @@
 #include "Generators/Normal/PolarCoordinatesGenerator.h"
 #include "Generators/Normal/RatioGenerator.h"
 #include "Generators/Normal/ThreeSigmaGenerator.h"
+#include "Generators/Other/LogarifmGenerator.h"
 #include "Generators/Uniform/FibonacciGenerator.h"
 #include "Generators/Uniform/LinearCongruentGenerator.h"
 #include "Generators/Uniform/QuadraticCongruentGenerator.h"
@@ -20,6 +21,7 @@ int main(int argc, char* argv[])
     auto* sigmaGenerator = new ThreeSigmaGenerator(5, quadraticGenerator);
     auto* polarGenerator = new PolarCoordinatesGenerator(5, reverseGenerator, quadraticGenerator);
     auto* ratioGenerator = new RatioGenerator(5, linearGenerator, fibonacciGenerator);
+    auto* logarifmGenerator = new LogarifmGenerator(5, reverseGenerator);
 
     while(true)
     {
@@ -67,6 +69,11 @@ int main(int argc, char* argv[])
             cout << endl;
             cout << "Ratio Method" << endl;
             TestGenerators::TestNormal(ratioGenerator);
+            break;
+        case 9:
+            cout << endl;
+            cout << "Logarifm Method" << endl;
+            TestGenerators::TestNormal(logarifmGenerator);
             break;
         default:
             return 0;
