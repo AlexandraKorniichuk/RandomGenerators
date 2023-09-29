@@ -13,7 +13,7 @@ float RatioGenerator::GenerateNormal()
     for (int i = 0; i < 50; i++)
     {
         float v = Generator1->GenerateUn();
-        float u = Generator1->GenerateUn();
+        float u = Generator2->GenerateUn();
         xf = sqrt(8 / exp(1))*(v - 0.5f) / u;
         if (xf * xf <= -4 * log(u))
         {
