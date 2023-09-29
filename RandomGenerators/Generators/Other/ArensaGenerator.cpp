@@ -8,7 +8,7 @@ ArensaGenerator::ArensaGenerator(int seed, UniformGeneratorBase* generator)
 
 float ArensaGenerator::GenerateNormal()
 {
-    const float a = 0.1f;
+    const float a = 55;
     for (int i = 0; i < 50; i++)
     {
         float u = Generator->GenerateUn();

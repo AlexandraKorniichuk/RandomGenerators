@@ -2,6 +2,7 @@
 #include "Generators/Normal/PolarCoordinatesGenerator.h"
 #include "Generators/Normal/RatioGenerator.h"
 #include "Generators/Normal/ThreeSigmaGenerator.h"
+#include "Generators/Other/ArensaGenerator.h"
 #include "Generators/Other/LogarifmGenerator.h"
 #include "Generators/Uniform/FibonacciGenerator.h"
 #include "Generators/Uniform/LinearCongruentGenerator.h"
@@ -22,7 +23,7 @@ int main(int argc, char* argv[])
     auto* polarGenerator = new PolarCoordinatesGenerator(5, reverseGenerator, quadraticGenerator);
     auto* ratioGenerator = new RatioGenerator(5, linearGenerator, fibonacciGenerator);
     auto* logarifmGenerator = new LogarifmGenerator(5, reverseGenerator);
-    auto* arensaGenerator = new LogarifmGenerator(5, reverseGenerator);
+    auto* arensaGenerator = new ArensaGenerator(5, reverseGenerator);
 
     while(true)
     {
