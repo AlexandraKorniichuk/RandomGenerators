@@ -154,6 +154,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Generators\Normal\NormalGenerator.cpp" />
+    <ClCompile Include="Generators\Normal\ThreeSigmaGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\FibonacciGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\LinearCongruentGenerator.cpp" />
     <ClCompile Include="Generators\Uniform\QuadraticCongruentGenerator.cpp" />
@@ -167,6 +169,8 @@
     <ClCompile Include="Tests\TestGenerators.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Generators\Normal\NormalGenerator.h" />
+    <ClInclude Include="Generators\Normal\ThreeSigmaGenerator.h" />
     <ClInclude Include="Generators\Uniform\FibonacciGenerator.h" />
     <ClInclude Include="Generators\Uniform\LinearCongruentGenerator.h" />
     <ClInclude Include="Generators\Uniform\QuadraticCongruentGenerator.h" />
@@ -179,7 +183,6 @@
     <ClInclude Include="Tests\TestGenerators.h" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Generators\Normal\" />
     <Folder Include="Generators\Other\" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

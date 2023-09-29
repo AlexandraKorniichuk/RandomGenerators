@@ -4,6 +4,7 @@
 class RandomGeneratorBase
 {
 public:
+    virtual ~RandomGeneratorBase() = default;
     RandomGeneratorBase();
     explicit RandomGeneratorBase(int seed);
     

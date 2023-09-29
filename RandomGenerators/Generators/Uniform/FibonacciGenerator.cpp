@@ -19,7 +19,7 @@ FibonacciGenerator::FibonacciGenerator(int seed)
 int FibonacciGenerator::Generate()
 {
     x = (xn + xPrevious) % m;
-    xPrevious = xn;
     xn += xPrevious;
+    xPrevious = xn - xPrevious;
     return x;
 }

@@ -9,7 +9,7 @@ LinearCongruentGenerator::LinearCongruentGenerator()
 LinearCongruentGenerator::LinearCongruentGenerator(int seed)
     : UniformGeneratorBase(seed)
 {
-    m = 34572812;
+    m = 3457281;
 }
 
 int LinearCongruentGenerator::Generate()

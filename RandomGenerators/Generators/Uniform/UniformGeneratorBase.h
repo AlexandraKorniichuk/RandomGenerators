@@ -8,6 +8,7 @@ public:
     explicit UniformGeneratorBase(int seed);
 
     int m = 2147483647;
-    
+
+    float GenerateUn();
     float CalculateUn() const;
 };

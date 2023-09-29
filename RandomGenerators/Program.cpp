@@ -1,4 +1,5 @@
 #include "RandomGeneratorBase.h"
+#include "Generators/Normal/ThreeSigmaGenerator.h"
 #include "Generators/Uniform/FibonacciGenerator.h"
 #include "Generators/Uniform/LinearCongruentGenerator.h"
 #include "Generators/Uniform/QuadraticCongruentGenerator.h"
@@ -9,30 +10,54 @@
 
 int main(int argc, char* argv[])
 {
-    cout << "Linear Congruent Method" << endl;
     auto* linearGenerator = new LinearCongruentGenerator(7);
-    TestGenerators::TestUniform(linearGenerator);
-    
-    cout << endl;
-    cout << "Quadratic Congruent Method" << endl;
-    auto* quadraticGenerator = new QuadraticCongruentGenerator(2);
-    TestGenerators::TestUniform(quadraticGenerator);
-
-    cout << endl;
-    cout << endl;
-    cout << "Fibonacci Method" << endl;
+    auto* quadraticGenerator = new QuadraticCongruentGenerator(3);
     auto* fibonacciGenerator = new FibonacciGenerator(5);
-    TestGenerators::TestUniform(fibonacciGenerator);
-
-    cout << endl;
-    cout << "Reverse congruent Method" << endl;
     auto* reverseGenerator = new ReverseCongruentGenerator(5);
-    TestGenerators::TestUniform(reverseGenerator);
-
-    cout << endl;
-    cout << "Union Method" << endl;
     auto* unionGenerator = new UnionGenerator(5, fibonacciGenerator, linearGenerator);
-    TestGenerators::TestUniform(unionGenerator);
+    auto* sigmaGenerator = new ThreeSigmaGenerator(5, quadraticGenerator);
+
+    while(true)
+    {
+        int method;
+        cout << "Enter method" << endl;
+        cin >> method;
+    
+        switch (method)
+        {
+        case 1:
+            cout << "Linear Congruent Method" << endl;
+            TestGenerators::TestUniform(linearGenerator);
+            break;
+        case 2:
+            cout << endl;
+            cout << "Quadratic Congruent Method" << endl;
+            TestGenerators::TestUniform(quadraticGenerator);
+            break;
+        case 3:
+            cout << endl;
+            cout << "Fibonacci Method" << endl;
+            TestGenerators::TestUniform(fibonacciGenerator);
+            break;
+        case 4:
+            cout << endl;
+            cout << "Reverse congruent Method" << endl;
+            TestGenerators::TestUniform(reverseGenerator);
+            break;
+        case 5:
+            cout << endl;
+            cout << "Union Method" << endl;
+            TestGenerators::TestUniform(unionGenerator);
+            break;
+        case 6:
+            cout << endl;
+            cout << "3 sigma Method" << endl;
+            TestGenerators::TestNormal(sigmaGenerator);
+            break;
+        default:
+            return 0;
+        }
+    }
     
     return 0;
 }
