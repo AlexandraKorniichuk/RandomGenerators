@@ -8,4 +8,5 @@ public:
     explicit ReverseCongruentGenerator(int seed);
 
     int Generate() override;
+    int FindModuloReverse();
 };

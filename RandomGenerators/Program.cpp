@@ -1,4 +1,6 @@
 #include "RandomGeneratorBase.h"
+#include "Generators/Normal/PolarCoordinatesGenerator.h"
+#include "Generators/Normal/RatioGenerator.h"
 #include "Generators/Normal/ThreeSigmaGenerator.h"
 #include "Generators/Uniform/FibonacciGenerator.h"
 #include "Generators/Uniform/LinearCongruentGenerator.h"
@@ -16,6 +18,8 @@ int main(int argc, char* argv[])
     auto* reverseGenerator = new ReverseCongruentGenerator(5);
     auto* unionGenerator = new UnionGenerator(5, fibonacciGenerator, linearGenerator);
     auto* sigmaGenerator = new ThreeSigmaGenerator(5, quadraticGenerator);
+    auto* polarGenerator = new PolarCoordinatesGenerator(5, reverseGenerator, quadraticGenerator);
+    auto* ratioGenerator = new RatioGenerator(5, linearGenerator, fibonacciGenerator);
 
     while(true)
     {
@@ -53,6 +57,16 @@ int main(int argc, char* argv[])
             cout << endl;
             cout << "3 sigma Method" << endl;
             TestGenerators::TestNormal(sigmaGenerator);
+            break;
+        case 7:
+            cout << endl;
+            cout << "Polar coordinates Method" << endl;
+            TestGenerators::TestNormal(polarGenerator);
+            break;
+        case 8:
+            cout << endl;
+            cout << "Ratio Method" << endl;
+            TestGenerators::TestNormal(ratioGenerator);
             break;
         default:
             return 0;

@@ -15,6 +15,16 @@ ReverseCongruentGenerator::ReverseCongruentGenerator(int seed)
 int ReverseCongruentGenerator::Generate()
 {
     const int a = 64233, c = 54562;
-    x = (a * (m - x % m) + c) % m;
+    x = (a * FindModuloReverse() + c) % m;
     return x;
+}
+
+int ReverseCongruentGenerator::FindModuloReverse()
+{
+    int a = 1;
+    while ((a * x) % m != 1)
+    {
+        a++;
+    }
+    return a;
 }
